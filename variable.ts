@@ -26,3 +26,24 @@ const point: { x: number; y: number } = { x: 1, y: 2 };
 const printNum: (i: number) => void = (num: number) => {
   console.log(num);
 };
+
+//when to use type annotations
+//1, functions that return any type
+const json = '{"x": 1, "y": 2}';
+const coordinates: { x: number; y: number } = JSON.parse(json);
+
+//2, when a variable is declared but not initialized
+let words = ['green', 'red', 'blue'];
+let containBlue: boolean;
+
+words.forEach((word) => {
+  if (word === 'green') containBlue = true;
+});
+
+//3, variable whose type cannot be inferred correctly
+let numbers = [1, -23, 4];
+let numberAboveZero: boolean | number = false;
+
+numbers.forEach((number) => {
+  if (number > 0) numberAboveZero = number;
+});
