@@ -13,3 +13,8 @@ const car = carsMaker[0];
 
 //help with array methods
 carsMaker.map((car) => car.toUpperCase());
+
+//flexible array types
+const importantDates: (Date | string)[] = [new Date()];
+
+importantDates.push('2030-10-2');
