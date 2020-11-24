@@ -1,4 +1,8 @@
-interface vehicle {}
+interface Vehicle {
+  name: string;
+  year: string;
+  broken: boolean;
+}
 
 const oldCivic = {
   name: 'old civic',
@@ -6,11 +10,7 @@ const oldCivic = {
   broken: true,
 };
 
-const printVehicle = (vehicle: {
-  name: string;
-  year: string;
-  broken: boolean;
-}) => {
+const printVehicle = (vehicle: Vehicle) => {
   console.log(
     `name is ${vehicle.name}, manufactured on ${vehicle.year}, broken ${vehicle.broken}`
   );
