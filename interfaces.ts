@@ -16,5 +16,5 @@ const printVehicle = (vehicle: Vehicle) => {
   );
 };
 
-//
+//called printVehicle
 printVehicle(oldCivic);
